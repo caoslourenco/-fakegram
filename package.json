@@ -1,0 +1,23 @@
+{
+  "name": "fakegram",
+  "version": "0.0.1",
+  "description": "trabalho em grupo da irmesão alura de backend com gemini",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caoslourenco/fakegram.git"
+  },
+  "author": "Ricardo, Camilla e Leandro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caoslourenco/fakegram/issues"
+  },
+  "homepage": "https://github.com/caoslourenco/fakegram#readme",
+  "dependencies": {
+    "express": "^4.21.1",
+    "nodemon": "^3.1.7"
+  }
+}
