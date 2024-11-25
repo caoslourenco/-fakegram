@@ -1,6 +1,7 @@
 const express = require ("express");
 const connectDB = require("./src/db/mongoConfig")
-const routeLivros = require ("./src/rotas/livro-rota")
+const routeLivros = require ("./src/rotas/livro-rota");
+const { chatGemini } = require("./src/utils/gemini");
 
 // const posts = [
 //     { id: 1, descricao: "Uma foto teste", imagem: "https://placecats.com/millie/300/150" },
@@ -14,6 +15,16 @@ app.use(express.json());
 connectDB();
 
 app.use("/livro", routeLivros)
+
+app.post("/chat", async (req, res) => {
+    const { message } = req.body 
+    try {
+        const result = await chatGemini (message)
+        res.json (result)
+    }catch (error){
+        res.status(500).json ({error: error.message})
+    }
+})
 
 const PORT=process.env.PORT || 3000; 
 
