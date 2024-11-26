@@ -1,4 +1,4 @@
-const livro = require ("../model/model-livro")
+const livro = require ("../models/model-livro")
 
 async function getAllBooks() {
   return await livro.find()

@@ -1,4 +1,4 @@
-const livroService = require ("../service/livro-service")
+const livroService = require ("../services/livro-service")
 
 async function getLivros(req, res) {
   try{
